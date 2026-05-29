@@ -6,6 +6,20 @@
   <title>SAGINT Executive Brief</title>
   <meta name="description" content="Executive briefing on SAGINT's verification layer opportunity, strategic risks, and operating architecture." />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    #environment .flow-step {
+      cursor: pointer;
+      transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease, color 160ms ease;
+    }
+    #environment .flow-step:hover,
+    #environment .flow-step:focus-visible {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(201, 151, 0, 0.78);
+      box-shadow: 0 0 0 2px rgba(201, 151, 0, 0.18), 0 16px 34px rgba(0, 0, 0, 0.22);
+      color: var(--accent-soft);
+      outline: none;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" aria-label="Primary navigation"><div class="nav-shell"><a class="brand" href="#top" aria-label="SAGINT Executive Brief home"><span class="brand-logo-wrap"><img src="assets/SAGINT No Text.jpg" alt="SAGINT mark" /></span><span>SAGINT Executive Brief</span></a><nav class="nav-links" aria-label="Page sections"><a href="#summary">Summary</a><a href="#environment">Environment</a><a href="#sagint-case">SAGINT Thesis</a><a href="#red-team">Red Team</a><a href="#operating-system">Operating System</a><a href="#why-alex">Alex's Experience</a></nav></div></header>
