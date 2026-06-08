@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAGINT Executive Brief</title>
   <meta name="description" content="Executive briefing on SAGINT's verification layer opportunity, strategic risks, and operating architecture." />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive" />
   <link rel="stylesheet" href="styles.css" />
   <style>
     #environment .flow-step {
@@ -19,6 +21,28 @@
       box-shadow: 0 0 0 2px rgba(201, 151, 0, 0.18), 0 16px 34px rgba(0, 0, 0, 0.22);
       color: var(--accent-soft);
       outline: none;
+    }
+
+    #why-alex .proof-card {
+      cursor: pointer;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    #why-alex .proof-card:hover,
+    #why-alex .proof-card:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(201, 151, 0, 0.65);
+      box-shadow: 0 24px 58px rgba(143, 108, 0, 0.14);
+      outline: none;
+    }
+
+    .modal-body p {
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .modal-body p:last-child {
+      margin-bottom: 0;
     }
   </style>
 </head>
@@ -231,11 +255,11 @@
 
     <section id="role" class="section section-muted">
       <div class="container">
-        <div class="section-heading with-logo"><div><p class="eyebrow">C-Suite Role Concept</p><h2>Lead with mandate, then title.</h2><p>The mandate is to own the strategy-to-execution system that allows SAGINT to scale.</p></div><img src="assets/SAGINT No Text.jpg" alt="SAGINT mark" class="section-logo" /></div>
+        <div class="section-heading with-logo"><div><p class="eyebrow">Leadership Role SAGINT Needs</p><h2>SAGINT needs an executive owner for strategy-to-execution.</h2><p>This is not about pitching a job title. It is about naming the role architecture required to convert founder vision into scalable execution.</p></div><img src="assets/SAGINT No Text.jpg" alt="SAGINT mark" class="section-logo" /></div>
         <div class="card-grid three">
-          <article class="card role-card"><h3>Chief Strategy Officer</h3><p>Best fit if the role owns market architecture, government-industry-finance alignment, standards-to-adoption logic, strategic priorities, and narrative discipline.</p></article>
-          <article class="card role-card emphasized"><h3>Chief Strategy and Operations Officer</h3><p>Best fit if the role owns the conversion of strategy into operations, the operating cadence, talent architecture, campaign governance, and execution feedback loops.</p></article>
-          <article class="card role-card"><h3>Chief Operating Officer</h3><p>Best fit if the role owns internal operating cadence, functional structure, execution management, team buildout, and company-wide accountability.</p></article>
+          <article class="card role-card"><h3>Strategy owner</h3><p>SAGINT needs a leader accountable for market architecture, government-industry-finance alignment, standards-to-adoption logic, strategic priorities, and narrative discipline.</p></article>
+          <article class="card role-card emphasized"><h3>Strategy and operations owner</h3><p>The strongest version of the role connects strategy to operations: operating cadence, talent architecture, campaign governance, execution feedback loops, and cross-functional accountability.</p></article>
+          <article class="card role-card"><h3>Operating owner</h3><p>SAGINT also needs clear ownership for internal operating rhythm, functional structure, execution management, team buildout, and company-wide accountability.</p></article>
         </div>
         <div class="callout"><h3>Role mission</h3><p>Build the operating system and talent architecture that allow SAGINT to scale from founder-led momentum to disciplined execution across technical development, node growth, standards adoption, financial integration, government adoption, international expansion, and team buildout.</p></div>
       </div>
@@ -245,10 +269,10 @@
       <div class="container">
         <div class="section-heading"><p class="eyebrow">Alex's Experience</p><h2>My value is not technical ownership or pure business development. It is strategy-to-execution leadership.</h2></div>
         <div class="proof-grid">
-          <article class="proof-card"><div class="proof-logo-frame"><img src="assets/SOCOM.png" alt="U.S. Special Operations Command logo" /></div><p class="label">SAGINT need</p><h3>Translate founder thesis into executable campaigns.</h3><p class="label">Relevant proof</p><p>SOCOM strategy and operational design work, including translating senior leader intent into strategy, campaign logic, stakeholder alignment, and execution mechanisms.</p></article>
-          <article class="proof-card"><div class="proof-logo-frame"><img src="assets/Special Forces.png" alt="U.S. Army Special Forces logo" /></div><p class="label">SAGINT need</p><h3>Build high-trust, cross-functional teams.</h3><p class="label">Relevant proof</p><p>Special Forces leadership in ambiguous, partner-heavy environments where assessment, selection, onboarding, and culture determine performance.</p></article>
-          <article class="proof-card"><div class="proof-logo-frame"><img src="assets/Sun FC.png" alt="Tampa Bay Sun FC logo" /></div><p class="label">SAGINT need</p><h3>Professionalize startup energy.</h3><p class="label">Relevant proof</p><p>Tampa Bay Sun FC Chief of Staff fellowship, building operating rhythms, SOPs, campaign governance, executive reporting, and cross-functional alignment.</p></article>
-          <article class="proof-card"><div class="proof-logo-frame"><img src="assets/IWI.png" alt="Irregular Warfare Initiative logo" /></div><p class="label">SAGINT need</p><h3>Build mission-aligned external systems.</h3><p class="label">Relevant proof</p><p>Irregular Warfare Initiative development and partnerships work, creating sponsor systems while protecting credibility and mission alignment.</p></article>
+          <article class="proof-card" data-modal="alex-socom" role="button" tabindex="0"><div class="proof-logo-frame"><img src="assets/SOCOM.png" alt="U.S. Special Operations Command logo" /></div><p class="label">SAGINT need</p><h3>Translate founder thesis into executable campaigns.</h3><p class="label">Relevant proof</p><p>SOCOM strategy and operational design work, including translating senior leader intent into strategy, campaign logic, stakeholder alignment, and execution mechanisms.</p></article>
+          <article class="proof-card" data-modal="alex-special-forces" role="button" tabindex="0"><div class="proof-logo-frame"><img src="assets/Special Forces.png" alt="U.S. Army Special Forces logo" /></div><p class="label">SAGINT need</p><h3>Build high-trust, cross-functional teams.</h3><p class="label">Relevant proof</p><p>Special Forces leadership in ambiguous, partner-heavy environments where assessment, selection, onboarding, and culture determine performance.</p></article>
+          <article class="proof-card" data-modal="alex-sun" role="button" tabindex="0"><div class="proof-logo-frame"><img src="assets/Sun FC.png" alt="Tampa Bay Sun FC logo" /></div><p class="label">SAGINT need</p><h3>Professionalize startup energy.</h3><p class="label">Relevant proof</p><p>Tampa Bay Sun FC Chief of Staff fellowship, building operating rhythms, SOPs, campaign governance, executive reporting, and cross-functional alignment.</p></article>
+          <article class="proof-card" data-modal="alex-iwi" role="button" tabindex="0"><div class="proof-logo-frame"><img src="assets/IWI.png" alt="Irregular Warfare Initiative logo" /></div><p class="label">SAGINT need</p><h3>Build mission-aligned external systems.</h3><p class="label">Relevant proof</p><p>Irregular Warfare Initiative development and partnerships work, creating sponsor systems while protecting credibility and mission alignment.</p></article>
         </div>
       </div>
     </section>
@@ -280,7 +304,7 @@
     </section>
   </main>
 
-  <dialog class="info-modal" id="modal"><div class="modal-card"><button class="modal-close" aria-label="Close dialog">×</button><p class="eyebrow" id="modal-kicker">Briefing Note</p><h3 id="modal-title"></h3><p id="modal-text"></p></div></dialog>
+  <dialog class="info-modal" id="modal"><div class="modal-card"><button class="modal-close" aria-label="Close dialog">×</button><p class="eyebrow" id="modal-kicker">Briefing Note</p><h3 id="modal-title"></h3><div class="modal-body" id="modal-text"></div></div></dialog>
 
   <footer class="site-footer"><div class="container footer-inner"><p>Prepared as a strategic discussion brief based on open-source research, prior conversations, and Alex Deep's operating-leadership perspective.</p><a href="#top">Back to top</a></div></footer>
 
@@ -308,7 +332,31 @@
       "op-metrics": ["Metrics", "Metrics keep the company honest about whether momentum is becoming traction. Examples include node growth, corridor density, onboarding cycle time, standards progress, and customer conversion."],
       "op-talent": ["Talent", "Talent is the engine of scale. SAGINT needs a deliberate assessment, selection, onboarding, and culture model for high-trust cross-functional hires."],
       "op-execution": ["Execution", "Execution is where vision becomes product delivery, node onboarding, customer implementation, government adoption, and repeatable operating practice."],
-      "op-learning": ["Learning", "Learning closes the loop. The operating system should feed lessons from customers, standards, government, finance, and technical implementation back into strategy."]
+      "op-learning": ["Learning", "Learning closes the loop. The operating system should feed lessons from customers, standards, government, finance, and technical implementation back into strategy."],
+      "alex-socom": ["SOCOM strategy work", [
+        "Problem: U.S. Special Operations Command had to translate senior leader vision into strategy, alignment, and implementation across a complex global enterprise with multiple stakeholders and competing priorities.",
+        "Action: I led strategy and analysis work, helped turn commander intent into planning mechanisms and decision frameworks, and supported communication of senior leader priorities across internal and external audiences.",
+        "Result: The work converted vision into executable strategy, campaign logic, stakeholder alignment, and follow-through mechanisms inside a 12 billion dollar enterprise context.",
+        "Relevance to SAGINT: Jacob's thesis touches technology, law, standards, national security, finance, Africa, critical minerals, and economic warfare. SAGINT needs the same discipline: translate the vision into campaigns, owners, decisions, and measurable execution."
+      ]],
+      "alex-special-forces": ["Special Forces team leadership", [
+        "Problem: Special Forces units operate in ambiguous, high-pressure environments where mission success depends on trust, role clarity, standards, preparation, and calm execution under pressure.",
+        "Action: I commanded a 90-person Special Forces company and led operations teams that had to synchronize planning, risk management, partner engagement, training, and execution across complex missions.",
+        "Result: That experience built my operating model for high-trust teams: clear mission focus, disciplined planning, accountability, adaptability, after-action learning, and culture that can hold under pressure.",
+        "Relevance to SAGINT: SAGINT's team will need people who can operate across technical, financial, policy, standards, and national security communities without losing trust, tempo, or judgment."
+      ]],
+      "alex-sun": ["Tampa Bay Sun FC operating system", [
+        "Problem: Tampa Bay Sun FC was a fast-moving startup professional sports club that needed more structure across marketing, communications, ticketing, partnerships, operations, community engagement, and matchday execution.",
+        "Action: I helped build the Marketing and Communications operating system: brand strategy, campaign governance, HubSpot and UTM standards, SeatGeek attribution logic, matchday SOPs, communications guidance, onboarding materials, and executive-ready playbook materials.",
+        "Result: The work turned startup urgency into repeatable execution by connecting fan growth, revenue, media, campaign measurement, and matchday operations around shared goals and operating rhythms.",
+        "Relevance to SAGINT: SAGINT appears to be entering the same kind of scale moment, where good ideas and founder energy need structure before momentum fragments into disconnected activity."
+      ]],
+      "alex-iwi": ["Irregular Warfare Initiative development system", [
+        "Problem: The Irregular Warfare Initiative had strong mission credibility, audience reach, and intellectual relevance, but needed a more structured way to convert that credibility into sustainable support without compromising its apolitical posture.",
+        "Action: I helped build the development and partnerships function: institutional sponsorship structure, sponsor tiers, sponsor-facing prospectus, sponsor alignment language, and a more deliberate approach to donor and corporate partner engagement.",
+        "Result: IWI secured its first multi-year institutional sponsor valued at 75,000 dollars over three years, grew corporate sponsors by ten, and strengthened mission-aligned revenue while protecting credibility.",
+        "Relevance to SAGINT: SAGINT will need to convert mission relevance into durable external systems with government, industry, finance, standards bodies, and international partners while protecting trust and narrative discipline."
+      ]]
     };
 
     const modal = document.getElementById("modal");
@@ -320,8 +368,21 @@
         const content = modalContent[button.dataset.modal];
         if (!content) return;
         title.textContent = content[0];
-        text.textContent = content[1];
+        text.innerHTML = "";
+        const paragraphs = Array.isArray(content[1]) ? content[1] : [content[1]];
+        paragraphs.forEach((paragraph) => {
+          const node = document.createElement("p");
+          node.textContent = paragraph;
+          text.appendChild(node);
+        });
         modal.showModal();
+      });
+
+      button.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          button.click();
+        }
       });
     });
 
